@@ -28,16 +28,14 @@ public class Pi {
      */
     public static double makePi(int num) {
         int nIn = 0;
-        int nTotal = 0;
         RandPoint[] points = new RandPoint[num];
         for (int i = 0; i < num; i++) {
             points[i] = new RandPoint();
             if (points[i].getR() < 1) {
                 nIn++;
             }
-            nTotal++;
         }
-        return (4*nIn) / ((double) nTotal);
+        return (4*nIn) / ((double) num);
     }
 
     /**
